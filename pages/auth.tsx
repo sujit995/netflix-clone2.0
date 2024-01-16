@@ -8,6 +8,7 @@ import { FaGithub } from 'react-icons/fa';
 
 import Input from '@/components/Input';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -123,6 +124,7 @@ const Auth = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

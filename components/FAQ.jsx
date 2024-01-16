@@ -36,21 +36,23 @@ const FAQ = () => {
         setSelected(getCurrentId === selected ? null : getCurrentId);
     }
   return (
-    <div className=''>
+    <div className='flex flex-col h-{100vh] w-[100vw] justify-center py-20 px-20 bg-black mt-2'>
+    <div className="flex justify-center items-center">
     <Heading text={"Frequently Asked Questions"}/>
-    <div className='flex h-{100vh] w-[100vw] justify-center align-middle py-20 px-20 mt-2'>
+    </div>
+    <div className='mt-4'>
         <div className='w-[100%]'>
             {
                 data && data.length > 0 ? (
                     data.map((dataItem, index) => (
-                        <div className='bg-black mb-[10px] px-[40px] py-[35px]' key={index}>
+                        <div className='bg-gray-700 mb-[10px] px-[40px] py-[35px] text-xl' key={index}>
                             <div onClick={() => handleSelection(dataItem.id)} className='text-white flex justify-between align-middle cursor-pointer'>
                                 <h3>{dataItem.question}</h3>
                                 <span>+</span>
                             </div>
                             {
                                 selected === dataItem.id? (
-                                    <div className='text-white'>
+                                    <div className='text-white mt-6 text-xl'>
                                         <p>{dataItem.answer}</p>
                                     </div>
                                 ) : null
@@ -62,6 +64,23 @@ const FAQ = () => {
                 )
             }
         </div>
+    </div>
+    <div>
+    <div className="flex justify-center items-center mt-6">
+    <h3 className="text-white text-xl sm:text-2xl justify-center">
+        Ready to watch? Enter your email to create or restart your membership.
+    </h3>
+    </div>
+      <div className="space-x-2 justify-center mt-6 flex flex-col md:flex-row gap-3 md:gap-0 px-16">
+        <input
+          type="text"
+          placeholder="Email Address"
+          className="bg-transparent border border-gray-500 block w-full md:w-[40%] rounded-md p-4 text-white"
+        />
+        <button className="bg-red-800 text-white rounded-md h-[60px] px-5 text-2xl font-semibold cursor-pointer items-center text-center">
+          Get Started
+        </button>
+      </div>
     </div>
     </div>
   )

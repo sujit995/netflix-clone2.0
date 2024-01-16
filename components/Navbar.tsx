@@ -49,8 +49,8 @@ const Navbar = () => {
     <>
     {
       isAuthenticated ?
-      <nav className="w-full fixed z-40">
-      <div className={`px-4 md:px-16 py-6 flex flex-row items-center transition duration-500 ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}`}>
+      <nav className="w-full">
+      <div className={`px-4 md:px-16 py-6 flex flex-row items-center`}>
         <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Home" active />
@@ -83,15 +83,15 @@ const Navbar = () => {
       </div>
       </nav>
     : 
-    <nav className="w-full fixed items-center">
-      <div className={`px-4 md:px-16 py-6 flex flex-row items-center justify-between transition duration-500 ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}`}>
+    <nav className="w-full items-center">
+      <div className={`px-4 md:px-16 py-6 flex flex-row items-center justify-between`}>
       <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" onClick={() => router.push('/homepage')}/>
       <div className="flex-row ml-8 gap-7 lg:flex">
           <select className='bg-transparent text-white w-[100px] border border-gray-400 rounded-[5px]'>
             <option value="1" className='text-black'>English</option>
             <option value="2" className='text-black'>Hindi</option>
           </select>
-          <button onClick={() => router.push('/auth')} className='bg-red-600 text-white rounded-md px-3 py-1 font-semibold'>Sign In</button>
+          <button onClick={() => router.push('/auth')} className='bg-red-800 text-white rounded-md px-3 py-1 font-semibold'>Sign In</button>
         </div>
       </div>
     </nav>
