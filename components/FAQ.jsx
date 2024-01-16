@@ -42,8 +42,8 @@ const FAQ = () => {
         <div className='w-[100%]'>
             {
                 data && data.length > 0 ? (
-                    data.map((dataItem) => (
-                        <div className='bg-black mb-[10px] px-[40px] py-[35px]' key={id}>
+                    data.map((dataItem, index) => (
+                        <div className='bg-black mb-[10px] px-[40px] py-[35px]' key={index}>
                             <div onClick={() => handleSelection(dataItem.id)} className='text-white flex justify-between align-middle cursor-pointer'>
                                 <h3>{dataItem.question}</h3>
                                 <span>+</span>
