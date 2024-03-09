@@ -11,17 +11,17 @@ const Homepage = () => {
   return (
     <div>
       <div className="relative w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-        <div className="bg-black w-full h-full lg:bg-opacity-50 pb-0 lg:pb-[40px]">
+        <div className="bg-black w-full h-full bg-opacity-70 md:bg-opacity-50 pb-0 lg:pb-[40px]">
           <Navbar />
           <div className="flex justify-center">
-            <div className="py-16 text-center mt-20 w-full">
+            <div className="py-6 md:py-16 text-center mt-10 md:mt-20 w-full">
               <Heading text={"Unlimited movies, TV shows and more"} />
               <SubHeading subheadings={"Watch anywhere. Cancel anytime."} />
               <h3 className="text-white text-2xl sm:text-2xl font-normal mt-3 sm:mt-6">
                 Ready to watch? Enter your email to create or restart your
                 membership.
               </h3>
-              <div className="space-x-2 justify-center mt-6 flex flex-col md:flex-row gap-3 md:gap-0 px-16">
+              <div className="justify-center mt-6 flex flex-col md:flex-row gap-4 px-16">
                 <input
                   type="text"
                   placeholder="Email Address"

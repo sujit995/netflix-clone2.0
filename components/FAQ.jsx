@@ -36,7 +36,7 @@ const FAQ = () => {
         setSelected(getCurrentId === selected ? null : getCurrentId);
     }
   return (
-    <div className='flex flex-col h-{100vh] w-[100vw] justify-center py-20 px-20 bg-black mt-2'>
+    <div className='flex flex-col w-full justify-center py-5 md:py-20 px-5 md:px-20 bg-black mt-2'>
     <div className="flex justify-center items-center">
     <Heading text={"Frequently Asked Questions"}/>
     </div>
@@ -45,14 +45,14 @@ const FAQ = () => {
             {
                 data && data.length > 0 ? (
                     data.map((dataItem, index) => (
-                        <div className='bg-gray-700 mb-[10px] px-[40px] py-[35px] text-xl' key={index}>
+                        <div className='bg-gray-700 mb-[10px] px-10 py-5 md:py-8 text-xl' key={index}>
                             <div onClick={() => handleSelection(dataItem.id)} className='text-white flex justify-between align-middle cursor-pointer'>
                                 <h3>{dataItem.question}</h3>
                                 <span>+</span>
                             </div>
                             {
                                 selected === dataItem.id? (
-                                    <div className='text-white mt-6 text-xl'>
+                                    <div className='text-white mt-6 text-base md:text-xl'>
                                         <p>{dataItem.answer}</p>
                                     </div>
                                 ) : null
@@ -71,13 +71,13 @@ const FAQ = () => {
         Ready to watch? Enter your email to create or restart your membership.
     </h3>
     </div>
-      <div className="space-x-2 justify-center mt-6 flex flex-col md:flex-row gap-3 md:gap-0 px-16">
+      <div className="justify-center mt-6 flex flex-col md:flex-row gap-4 px-16">
         <input
           type="text"
           placeholder="Email Address"
-          className="bg-transparent border border-gray-500 block w-full md:w-[40%] rounded-md p-4 text-white"
+          className="bg-transparent border border-gray-500 block w-full md:w-[40%] p-4 text-white"
         />
-        <button className="bg-red-800 text-white rounded-md h-[60px] px-5 text-2xl font-semibold cursor-pointer items-center text-center">
+        <button className="bg-red-800 text-white rounded-md h-[60px] px-5 font-semibold cursor-pointer text-center">
           Get Started
         </button>
       </div>

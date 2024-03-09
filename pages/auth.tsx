@@ -71,10 +71,10 @@ const Auth = () => {
 
   return (
     <div className="relative w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="bg-black w-full h-full lg:bg-opacity-50 pb-0 lg:pb-[40px]">
+      <div className="bg-black w-full h-full bg-opacity-70 lg:bg-opacity-50 pb-0 lg:pb-[40px]">
         <Navbar />
         <div className="flex justify-center">
-          <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-20 lg:w-2/5 lg:max-w-md rounded-md w-full">
+          <div className="px-16 py-16 self-center mt-10 lg:mt-20 lg:w-2/5 lg:max-w-md rounded-md w-full">
             <h2 className="text-white text-4xl mb-8 font-semibold">
               {variant === 'login' ? 'Sign in' : 'Register'}
             </h2>
@@ -91,7 +91,7 @@ const Auth = () => {
               <Input
                 id="email"
                 type="email"
-                label="Email address or phone number"
+                label="Email address"
                 value={email}
                 onChange={(e: any) => setEmail(e.target.value)} 
               />

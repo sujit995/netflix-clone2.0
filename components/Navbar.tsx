@@ -54,11 +54,11 @@ const Navbar = () => {
         <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Home" active />
-          <NavbarItem label="Series" />
+          {/* <NavbarItem label="Series" />
           <NavbarItem label="Films" />
-          <NavbarItem label="New & Popular" />
+          <NavbarItem label="New & Popular" /> */}
           <NavbarItem label="My List" />
-          <NavbarItem label="Browse by Languages" />
+          {/* <NavbarItem label="Browse by Languages" /> */}
         </div>
         <div onClick={toggleMobileMenu} className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer z-10">
           <p className="text-white text-sm">Browse</p>
@@ -86,7 +86,7 @@ const Navbar = () => {
     <nav className="w-full items-center">
       <div className={`px-4 md:px-16 py-6 flex flex-row items-center justify-between`}>
       <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" onClick={() => router.push('/homepage')}/>
-      <div className="flex-row ml-8 gap-7 lg:flex">
+      <div className="inline-flex ml-8 gap-7">
           <select className='bg-transparent text-white w-[100px] border border-gray-400 rounded-[5px]'>
             <option value="1" className='text-black'>English</option>
             <option value="2" className='text-black'>Hindi</option>
